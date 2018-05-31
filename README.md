@@ -1,6 +1,6 @@
 # react-example
 
-React example app that demonstrates using [React] with [webpack], and [babeljs], as well as project structure.
+React example ToDo app that demonstrates using [React] with [webpack], and [babeljs], as well as project structure.
 
 Requirements:
 - git
@@ -10,11 +10,11 @@ Requirements:
 To run the app locally:
 
 ```bash
-git clone https://github.com/mzabriskie/react-example.git
-cd react-example
-npm run setup
-npm run dev
-open http://localhost:8080
+git clone https://github.com/farooqmir/reactJsToDoApp.git
+cd todoapp
+npm install
+npm run start
+open http://localhost:8080 [may vary, check your port in console]
 ```
 
 [React]: http://facebook.github.io/react/
