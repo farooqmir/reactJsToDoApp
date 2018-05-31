@@ -58,7 +58,7 @@ export default class ToDoListItem extends Component {
         this.setState({isEditing:false});
     }
     onDeleteClick(){
-       alert("TODO- home work for you! ;)");
+       this.props.deleteTask(this.props.task);
     }
     onSaveClick(event){
         event.preventDefault();

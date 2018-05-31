@@ -25,7 +25,8 @@ export default class ToDoFeature extends React.Component{
                <ToDoList 
                 todos = {this.state.todos} 
                 toggleTask = {this.toggleTask.bind(this)}
-                saveTask = {this.saveTask.bind(this)}/> 
+                saveTask = {this.saveTask.bind(this)}
+                deleteTask = {this.deleteTask.bind(this)}/> 
             </div>
         );
     }
@@ -35,12 +36,15 @@ export default class ToDoFeature extends React.Component{
         foundTask.isComplete = !foundTask.isComplete;
         this.setState({todos: this.state.todos}); 
     }
-    
+      
     createTask(task){  
       this.state.todos.push({task,isComplete:false});
       this.setState({todos:this.state.todos});
     }
-
+    deleteTask(task){
+        _.remove(this.state.todos, (todo=> todo.task==task));
+        this.setState({todos:this.state.todos});
+    }
     saveTask(oldTask,newTask){ 
         const foundTask = _.find(this.state.todos,(todo)=> todo.task==oldTask);
         foundTask.task = newTask;
